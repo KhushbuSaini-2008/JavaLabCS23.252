@@ -36,4 +36,10 @@ public class main{
     }
 }```
 OUTPUT:
-<img width="290" height="123" alt="image" src="https://github.com/user-attachments/assets/08701f74-7e59-4c9e-884b-dcba9a96843a" />
+Enter first number: 55
+Enter second number: 10
+
+Addition: 65
+Subtraction: 45
+Multiplication: 550
+Division: 5.5
