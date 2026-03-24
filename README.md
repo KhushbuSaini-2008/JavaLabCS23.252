@@ -35,3 +35,5 @@ public class main{
         sc.close();
     }
 }```
+OUTPUT:
+<img width="290" height="123" alt="image" src="https://github.com/user-attachments/assets/08701f74-7e59-4c9e-884b-dcba9a96843a" />
