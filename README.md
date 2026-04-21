@@ -1,5 +1,5 @@
 # JavaLabCS23.252
-(#write a java add to number)[xyz]
+(write a java add to number)[#xyz]
 ```import java.util.Scanner;
 
 ###xyz
