@@ -1,8 +1,8 @@
 # JavaLabCS23.252
 [1. Wap for addition sub mul div using object and classes.](#Program1)
 [2. Write a class for addition of two distance where each distance is given in m,cm,mm.](#Program2)
-[Test the result by creation of object in main class where each distance is given in m, cm](#Program3)
-[Addition of time given in hours, minutes and seconds.](#Program4)
+[3. Test the result by creation of object in main class where each distance is given in m, cm](#Program3)
+[4. Addition of time given in hours, minutes and seconds.](#Program4)
 ## Program1
 
 ```
@@ -152,6 +152,53 @@ public class MainClass {
     }
 }```
 <img width="252" height="117" alt="image" src="https://github.com/user-attachments/assets/aa742c40-4509-4ec6-bb7c-275edcc9fcd9" />
+```import java.util.Scanner;
+
+class TimeHM {
+    int hr, min;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter hours: ");
+        hr = sc.nextInt();
+        System.out.print("Enter minutes: ");
+        min = sc.nextInt();
+    }
+
+    TimeHM add(TimeHM t2) {
+        TimeHM t3 = new TimeHM();
+
+        t3.hr = this.hr + t2.hr;
+        t3.min = this.min + t2.min;
+
+        if (t3.min >= 60) {
+            t3.hr += t3.min / 60;
+            t3.min = t3.min % 60;
+        }
+
+        return t3;
+    }
+
+    void display() {
+        System.out.println(hr + " hr " + min + " min");
+    }
+
+    public static void main(String[] args) {
+        TimeHM t1 = new TimeHM();
+        TimeHM t2 = new TimeHM();
+
+        System.out.println("Enter first time:");
+        t1.input();
+
+        System.out.println("Enter second time:");
+        t2.input();
+
+        TimeHM t3 = t1.add(t2);
+
+        System.out.print("Total Time = ");
+        t3.display();
+    }
+} ```
 
 
 
