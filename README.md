@@ -298,6 +298,7 @@ int main() {
 
     return 0;
 }```
+<img width="214" height="41" alt="image" src="https://github.com/user-attachments/assets/eff13d7c-7f67-4360-b5af-a036fac0c79a" />
 
 
 
