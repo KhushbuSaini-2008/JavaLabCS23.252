@@ -322,6 +322,27 @@ int main() {
     return 0;
 }
 
+<img width="185" height="40" alt="image" src="https://github.com/user-attachments/assets/245bc35f-b4f9-4b80-b1e3-93c24a1ff5ef" />
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int a = 0, b = 1, c;
+
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: ");
+    for(i = 1; i <= n; i++) {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    return 0;
+}
+
 
 
 
