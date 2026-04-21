@@ -6,6 +6,8 @@
 [5. Addition of two time given in hours, minutes .](#Program5)
 [6. Collect the code from internet for any five programs of c language. (Fact, armstrong, palindrome, Fibonacci, pattern).](#Program6)
 [7. Write a class that is having four method for 1-dimensional array. (Input, output 1,out2, reverse).).](#Program7)
+[8.  write a class with multiple methods to perform matrix operations (transpose, addition, sum of rows, sum of columns, sum of diagonal).](#Program8)
+
 
 ## Program1
 
@@ -413,6 +415,7 @@ class Array1D {
         obj.reverse();
     }
 }```
+<img width="391" height="258" alt="image" src="https://github.com/user-attachments/assets/20da65e4-ec24-438f-a3c0-a45d9191f632" />
 
 
 
