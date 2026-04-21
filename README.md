@@ -152,6 +152,64 @@ public class MainClass {
     }
 }```
 <img width="252" height="117" alt="image" src="https://github.com/user-attachments/assets/aa742c40-4509-4ec6-bb7c-275edcc9fcd9" />
+## Program4
+```import java.util.Scanner;
+
+class TimeHMS {
+    int hr, min, sec;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter hours: ");
+        hr = sc.nextInt();
+        System.out.print("Enter minutes: ");
+        min = sc.nextInt();
+        System.out.print("Enter seconds: ");
+        sec = sc.nextInt();
+    }
+
+    TimeHMS add(TimeHMS t2) {
+        TimeHMS t3 = new TimeHMS();
+
+        t3.sec = this.sec + t2.sec;
+        t3.min = this.min + t2.min;
+        t3.hr = this.hr + t2.hr;
+
+        if (t3.sec >= 60) {
+            t3.min += t3.sec / 60;
+            t3.sec = t3.sec % 60;
+        }
+
+        if (t3.min >= 60) {
+            t3.hr += t3.min / 60;
+            t3.min = t3.min % 60;
+        }
+
+        return t3;
+    }
+
+    void display() {
+        System.out.println(hr + " hr " + min + " min " + sec + " sec");
+    }
+
+    public static void main(String[] args) {
+        TimeHMS t1 = new TimeHMS();
+        TimeHMS t2 = new TimeHMS();
+
+        System.out.println("Enter first time:");
+        t1.input();
+
+        System.out.println("Enter second time:");
+        t2.input();
+
+        TimeHMS t3 = t1.add(t2);
+
+        System.out.print("Total Time = ");
+        t3.display();
+    }
+}```
+<img width="277" height="151" alt="image" src="https://github.com/user-attachments/assets/c73144e7-e15f-47e7-8630-ac50c4b27d0a" />
+
 ## Program5
 ```import java.util.Scanner;
 
