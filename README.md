@@ -1,7 +1,8 @@
 # JavaLabCS23.252
-```import java.util.Scanner;
 [xyz](write a java add to number)
+```import java.util.Scanner;
 
+#xyz
 public class main{
     public static void main(String[] args) {
 
