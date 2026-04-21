@@ -159,3 +159,6 @@ public class MainClass {
         d3.display();
     }
 }```
+Output:
+<img width="263" height="128" alt="image" src="https://github.com/user-attachments/assets/615f492b-4aa8-4207-a93e-7f9976f249a6" />
+
