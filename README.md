@@ -41,8 +41,8 @@ public class Main {
 
         sc.close();
     }
-}
-<img width="281" height="121" alt="image" src="https://github.com/user-attachments/assets/b7a732b6-d55a-4d93-848a-0d16f5941e9f" />```
+}```
+<img width="281" height="121" alt="image" src="https://github.com/user-attachments/assets/b7a732b6-d55a-4d93-848a-0d16f5941e9f" />
 
 
 ## Program 2
