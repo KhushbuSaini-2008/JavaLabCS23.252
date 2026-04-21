@@ -5,6 +5,7 @@
 [4. Addition of  two time given in hours, minutes and seconds.](#Program4)
 [5. Addition of two time given in hours, minutes .](#Program5)
 [6. Collect the code from internet for any five programs of c language. (Fact, armstrong, palindrome, Fibonacci, pattern).](#Program6)
+[ Write a class that is having four method for 1-dimensional array. (Input, output 1,out2, reverse).).](#Program7)
 
 ## Program1
 
@@ -363,7 +364,8 @@ int main() {
     return 0;
 }```
 <img width="255" height="109" alt="image" src="https://github.com/user-attachments/assets/dfa67ea2-7635-46be-bd6b-619a9ad32f6d" />
-import java.util.Scanner;
+## program7
+```import java.util.Scanner;
 
 class Array1D {
     int a[] = new int[100];
@@ -410,7 +412,7 @@ class Array1D {
         obj.output2();
         obj.reverse();
     }
-}
+}```
 
 
 
