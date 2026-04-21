@@ -363,6 +363,54 @@ int main() {
     return 0;
 }```
 <img width="255" height="109" alt="image" src="https://github.com/user-attachments/assets/dfa67ea2-7635-46be-bd6b-619a9ad32f6d" />
+import java.util.Scanner;
+
+class Array1D {
+    int a[] = new int[100];
+    int n;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of array: ");
+        n = sc.nextInt();
+
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+    }
+
+    void output1() {
+        System.out.println("Array elements are:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
+    }
+
+    void output2() {
+        System.out.println("Array elements with index:");
+        for (int i = 0; i < n; i++) {
+            System.out.println("a[" + i + "] = " + a[i]);
+        }
+    }
+
+    void reverse() {
+        System.out.println("Array in reverse order:");
+        for (int i = n - 1; i >= 0; i--) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Array1D obj = new Array1D();
+        obj.input();
+        obj.output1();
+        obj.output2();
+        obj.reverse();
+    }
+}
 
 
 
