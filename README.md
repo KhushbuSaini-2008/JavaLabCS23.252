@@ -1,8 +1,8 @@
 # JavaLabCS23.252
-[Wap for addition sub mul div using object and classes.](#Program1)
-[Write a class for addition of two distance where each distance is given in m,cm,mm.](#Program2)
-[Wap for addition sub mul div using object and classes.](#Program1)
-[Wap for addition sub mul div using object and classes.](#Program1)
+1.[Wap for addition sub mul div using object and classes.](#Program1)
+2.[Write a class for addition of two distance where each distance is given in m,cm,mm.](#Program2)
+3.[Wap for addition sub mul div using object and classes.](#Program3)
+4.[Wap for addition sub mul div using object and classes.](#Program4)
 ```import java.util.Scanner;
 
 ## Program1
@@ -48,6 +48,7 @@ Addition: 65
 Subtraction: 45
 Multiplication: 550
 Division: 5.5
+```
 import java.util.Scanner;
 
 class Distance {
@@ -107,4 +108,4 @@ class Distance {
         System.out.print("Total Distance: ");
         result.display();
     }
-}
+}```
