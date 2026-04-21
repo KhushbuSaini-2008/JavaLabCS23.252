@@ -299,6 +299,28 @@ int main() {
     return 0;
 }```
 <img width="214" height="41" alt="image" src="https://github.com/user-attachments/assets/eff13d7c-7f67-4360-b5af-a036fac0c79a" />
+#include <stdio.h>
+
+int main() {
+    int n, temp, rem, rev = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    temp = n;
+    while(temp > 0) {
+        rem = temp % 10;
+        rev = rev * 10 + rem;
+        temp /= 10;
+    }
+
+    if(rev == n)
+        printf("Palindrome Number");
+    else
+        printf("Not a Palindrome Number");
+
+    return 0;
+}
 
 
 
