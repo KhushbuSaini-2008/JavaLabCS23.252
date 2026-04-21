@@ -3,7 +3,9 @@
 [2. Write a class for addition of two distance where each distance is given in m,cm,mm.](#Program2)
 [3. Test the result by creation of object in main class where each distance is given in m, cm](#Program3)
 [4. Addition of  two time given in hours, minutes and seconds.](#Program4)
-[5. Addition of two time given in hours, minutes .](#Program4)
+[5. Addition of two time given in hours, minutes .](#Program5)
+[6. Collect the code from internet for any five programs of c language. (Fact, armstrong, palindrome, Fibonacci, pattern).](#Program6)
+
 ## Program1
 
 ```
@@ -260,6 +262,23 @@ class TimeHM {
     }
 } ```
 <img width="242" height="122" alt="image" src="https://github.com/user-attachments/assets/abb867ba-751b-4698-84a4-cd4c01b301d5" />
+## Program6
+```#include <stdio.h>
+
+int main() {
+    int n, i;
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        fact = fact * i;
+    }
+
+    printf("Factorial = %lld", fact);
+    return 0;
+}```
 
 
 
