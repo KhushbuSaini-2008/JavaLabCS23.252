@@ -48,9 +48,8 @@ Addition: 65
 Subtraction: 45
 Multiplication: 550
 Division: 5.5
-```
-import java.util.Scanner;
 
+```import java.util.Scanner;
 class Distance {
     int meter, cm, mm;
 
