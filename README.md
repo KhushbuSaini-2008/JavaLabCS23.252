@@ -417,6 +417,118 @@ class Array1D {
 }```
 <img width="391" height="258" alt="image" src="https://github.com/user-attachments/assets/20da65e4-ec24-438f-a3c0-a45d9191f632" />
 ## Program8
+```import java.util.Scanner;
+
+class MatrixOperation {
+    int a[][] = new int[10][10];
+    int b[][] = new int[10][10];
+    int c[][] = new int[10][10];
+    int r, col;
+
+    void inputMatrices() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        r = sc.nextInt();
+        System.out.print("Enter columns: ");
+        col = sc.nextInt();
+
+        System.out.println("Enter first matrix:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < col; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Enter second matrix:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < col; j++) {
+                b[i][j] = sc.nextInt();
+            }
+        }
+    }
+
+    void displayMatrix(int m[][]) {
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    void addition() {
+        System.out.println("Addition of matrices:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < col; j++) {
+                c[i][j] = a[i][j] + b[i][j];
+                System.out.print(c[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    void transpose() {
+        System.out.println("Transpose of first matrix:");
+        for (int i = 0; i < col; i++) {
+            for (int j = 0; j < r; j++) {
+                System.out.print(a[j][i] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    void sumOfRows() {
+        System.out.println("Sum of rows of first matrix:");
+        for (int i = 0; i < r; i++) {
+            int sum = 0;
+            for (int j = 0; j < col; j++) {
+                sum += a[i][j];
+            }
+            System.out.println("Row " + (i + 1) + " sum = " + sum);
+        }
+    }
+
+    void sumOfColumns() {
+        System.out.println("Sum of columns of first matrix:");
+        for (int j = 0; j < col; j++) {
+            int sum = 0;
+            for (int i = 0; i < r; i++) {
+                sum += a[i][j];
+            }
+            System.out.println("Column " + (j + 1) + " sum = " + sum);
+        }
+    }
+
+    void sumOfDiagonal() {
+        if (r == col) {
+            int sum = 0;
+            for (int i = 0; i < r; i++) {
+                sum += a[i][i];
+            }
+            System.out.println("Sum of diagonal elements = " + sum);
+        } else {
+            System.out.println("Diagonal sum possible only for square matrix");
+        }
+    }
+
+    public static void main(String[] args) {
+        MatrixOperation obj = new MatrixOperation();
+        obj.inputMatrices();
+
+        System.out.println("First Matrix:");
+        obj.displayMatrix(obj.a);
+
+        System.out.println("Second Matrix:");
+        obj.displayMatrix(obj.b);
+
+        obj.addition();
+        obj.transpose();
+        obj.sumOfRows();
+        obj.sumOfColumns();
+        obj.sumOfDiagonal();
+    }
+}```
 
 
 
