@@ -2,7 +2,7 @@
 1.[Wap for addition sub mul div using object and classes.](#Program1)
 2.[Write a class for addition of two distance where each distance is given in m,cm,mm.](#Program2)
 3.[Test the result by creation of object in main class where each distance is given in m, cm](#Program3)
-4.[Wap for addition sub mul div using object and classes.](#Program4)
+4.[Addition of time given in hours, minutes and seconds.](#Program4)
 ```import java.util.Scanner;
 
 ## Program1
