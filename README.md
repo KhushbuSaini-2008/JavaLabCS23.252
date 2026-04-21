@@ -104,8 +104,8 @@ class Distance {
         System.out.print("Total Distance = ");
         d3.display();
     }
-}```
-<img width="299" height="133" alt="image" src="https://github.com/user-attachments/assets/e08c9287-e197-4398-bab0-f8a04f803095" />
+}
+<img width="299" height="133" alt="image" src="https://github.com/user-attachments/assets/e08c9287-e197-4398-bab0-f8a04f803095" />```
 
 
 
