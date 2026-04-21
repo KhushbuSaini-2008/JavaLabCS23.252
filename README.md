@@ -7,6 +7,17 @@
 [6. Collect the code from internet for any five programs of c language. (Fact, armstrong, palindrome, Fibonacci, pattern).](#Program6)
 [7. Write a class that is having four method for 1-dimensional array. (Input, output 1,out2, reverse).).](#Program7)
 [8.  write a class with multiple methods to perform matrix operations (transpose, addition, sum of rows, sum of columns, sum of diagonal).](#Program8)
+[9. Write a program using three classes to print 1-100 ,1-100,1-100 with and without thread and analyse the output and repeat the same program using runnable interface.](#Program8)
+[10. Using the concept of multithreading the output of all three threads must be synchronised (use join method).](#Program8)
+[](#Program8)
+[](#Program8)
+[](#Program8)
+[](#Program8)
+[](#Program8)
+[](#Program8)
+[](#Program8)
+
+
 
 
 ## Program1
@@ -530,5 +541,6 @@ class MatrixOperation {
     }
 }```
 
+<img width="317" height="521" alt="image" src="https://github.com/user-attachments/assets/ffd36f7f-aa35-48f2-9b87-5bd9551cd047" />
 
 
