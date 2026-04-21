@@ -103,6 +103,57 @@ class Distance {
     }
 }
 <img width="254" height="124" alt="image" src="https://github.com/user-attachments/assets/62dbe0eb-8b33-40f5-8447-cb809add0b09" />```
+## Program3
+```import java.util.Scanner;
+
+class DistanceMC {
+    int m, cm;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter meter: ");
+        m = sc.nextInt();
+        System.out.print("Enter centimeter: ");
+        cm = sc.nextInt();
+    }
+
+    DistanceMC add(DistanceMC d2) {
+        DistanceMC d3 = new DistanceMC();
+        d3.m = this.m + d2.m;
+        d3.cm = this.cm + d2.cm;
+
+        if (d3.cm >= 100) {
+            d3.m += d3.cm / 100;
+            d3.cm = d3.cm % 100;
+        }
+        return d3;
+    }
+
+    void display() {
+        System.out.println(m + " m " + cm + " cm");
+    }
+}
+
+public class MainClass {
+    public static void main(String[] args) {
+        DistanceMC d1 = new DistanceMC();
+        DistanceMC d2 = new DistanceMC();
+
+        System.out.println("Enter first distance:");
+        d1.input();
+
+        System.out.println("Enter second distance:");
+        d2.input();
+
+        DistanceMC d3 = d1.add(d2);
+
+        System.out.print("Total Distance = ");
+        d3.display();
+    }
+}```
+<img width="252" height="117" alt="image" src="https://github.com/user-attachments/assets/aa742c40-4509-4ec6-bb7c-275edcc9fcd9" />
+
+
 
 
 
