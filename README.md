@@ -1,8 +1,8 @@
 # JavaLabCS23.252
-[xyz](write a java add to number)
+[#xyz](write a java add to number)
 ```import java.util.Scanner;
 
-##xyz
+###xyz
 public class main{
     public static void main(String[] args) {
 
