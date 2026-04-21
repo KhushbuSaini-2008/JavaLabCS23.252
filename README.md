@@ -344,6 +344,24 @@ int main() {
 }
 
 
+<img width="281" height="34" alt="image" src="https://github.com/user-attachments/assets/fb0e4d7f-283b-4236-a655-af75efd30cfb" />
+```#include <stdio.h>
+
+int main() {
+    int i, j, n;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        for(j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}```
 
 
 
