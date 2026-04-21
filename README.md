@@ -280,6 +280,7 @@ int main() {
     return 0;
 }```
 
+<img width="151" height="45" alt="image" src="https://github.com/user-attachments/assets/6b0f5784-b187-467c-81bb-d8138af9cd08" />
 
 
 
