@@ -1,8 +1,8 @@
 # JavaLabCS23.252
-[write a java add to number](#xyz)
+[Wap for addition sub mul div using object and classes.](#Program1)
 ```import java.util.Scanner;
 
-## xyz
+## Program1
 public class main{
     public static void main(String[] args) {
 
