@@ -2,7 +2,7 @@
 [write a java add to number][#xyz]
 ```import java.util.Scanner;
 
-###xyz
+## xyz
 public class main{
     public static void main(String[] args) {
 
