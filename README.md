@@ -49,8 +49,10 @@ Subtraction: 45
 Multiplication: 550
 Division: 5.5
 
-## Program2
-```import java.util.Scanner;
+## Program 2
+
+```java
+import java.util.Scanner;
 
 class Distance {
     int m, cm, mm;
@@ -105,7 +107,8 @@ class Distance {
         d3.display();
     }
 }
-<img width="299" height="133" alt="image" src="https://github.com/user-attachments/assets/e08c9287-e197-4398-bab0-f8a04f803095" />```
+<img width="254" height="124" alt="image" src="https://github.com/user-attachments/assets/62dbe0eb-8b33-40f5-8447-cb809add0b09" />```
+
 
 
 
