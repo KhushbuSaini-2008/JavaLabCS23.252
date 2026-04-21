@@ -109,3 +109,5 @@ class Distance {
         result.display();
     }
 }```
+Output:
+<img width="380" height="124" alt="image" src="https://github.com/user-attachments/assets/b68815ba-073b-4381-97ff-41dc266f92a6" />
