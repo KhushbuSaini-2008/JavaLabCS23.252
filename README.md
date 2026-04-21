@@ -5,7 +5,7 @@
 [4. Addition of  two time given in hours, minutes and seconds.](#Program4)
 [5. Addition of two time given in hours, minutes .](#Program5)
 [6. Collect the code from internet for any five programs of c language. (Fact, armstrong, palindrome, Fibonacci, pattern).](#Program6)
-[ Write a class that is having four method for 1-dimensional array. (Input, output 1,out2, reverse).).](#Program7)
+[7. Write a class that is having four method for 1-dimensional array. (Input, output 1,out2, reverse).).](#Program7)
 
 ## Program1
 
