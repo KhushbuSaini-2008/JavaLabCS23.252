@@ -3,7 +3,7 @@
 [Write a class for addition of two distance where each distance is given in m,cm,mm.](#Program2)
 [Test the result by creation of object in main class where each distance is given in m, cm](#Program3)
 [Addition of time given in hours, minutes and seconds.](#Program4)
-## Program 1
+## Program1
 
 ```
 import java.util.Scanner;
@@ -44,7 +44,7 @@ public class Main {
 }```
 <img width="403" height="107" alt="image" src="https://github.com/user-attachments/assets/8b739f68-c8db-4793-9e60-42cd01003df1" />
 
-## Program 2
+## Program2
 
 ```java
 import java.util.Scanner;
