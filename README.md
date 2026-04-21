@@ -50,7 +50,8 @@ Multiplication: 550
 Division: 5.5
 ## Program2
 
-```import java.util.Scanner;
+```java
+import java.util.Scanner;
 class Distance {
     int meter, cm, mm;
 
