@@ -3,10 +3,12 @@
 2.[Write a class for addition of two distance where each distance is given in m,cm,mm.](#Program2)
 3.[Test the result by creation of object in main class where each distance is given in m, cm](#Program3)
 4.[Addition of time given in hours, minutes and seconds.](#Program4)
-```import java.util.Scanner;
+## Program 1
 
-## Program1
-public class main{
+```java
+import java.util.Scanner;
+
+public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -39,15 +41,9 @@ public class main{
 
         sc.close();
     }
-}```
-OUTPUT:
-Enter first number: 55
-Enter second number: 10
+}
+<img width="281" height="121" alt="image" src="https://github.com/user-attachments/assets/b7a732b6-d55a-4d93-848a-0d16f5941e9f" />```
 
-Addition: 65
-Subtraction: 45
-Multiplication: 550
-Division: 5.5
 
 ## Program 2
 
