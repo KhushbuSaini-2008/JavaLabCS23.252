@@ -152,6 +152,7 @@ public class MainClass {
     }
 }```
 <img width="252" height="117" alt="image" src="https://github.com/user-attachments/assets/aa742c40-4509-4ec6-bb7c-275edcc9fcd9" />
+## Program5
 ```import java.util.Scanner;
 
 class TimeHM {
@@ -199,6 +200,7 @@ class TimeHM {
         t3.display();
     }
 } ```
+<img width="242" height="122" alt="image" src="https://github.com/user-attachments/assets/abb867ba-751b-4698-84a4-cd4c01b301d5" />
 
 
 
