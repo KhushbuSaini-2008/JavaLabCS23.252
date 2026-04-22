@@ -432,7 +432,9 @@ int main() {
 }
 ```
 <img width="255" height="109" alt="image" src="https://github.com/user-attachments/assets/dfa67ea2-7635-46be-bd6b-619a9ad32f6d" />
+
 ## program7
+
 ```
 import java.util.Scanner;
 
