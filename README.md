@@ -338,6 +338,7 @@ int main() {
 ```
 
 <img width="151" height="45" alt="image" src="https://github.com/user-attachments/assets/6b0f5784-b187-467c-81bb-d8138af9cd08" />
+
 ```
 #include <stdio.h>
 
@@ -358,6 +359,7 @@ int main() {
 }
 ```
 <img width="214" height="41" alt="image" src="https://github.com/user-attachments/assets/eff13d7c-7f67-4360-b5af-a036fac0c79a" />
+
 ```
 #include <stdio.h>
 
