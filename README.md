@@ -200,10 +200,14 @@ public class MainClass {
         System.out.print("Total Distance = ");
         d3.display();
     }
-}```
+}
+```
 <img width="252" height="117" alt="image" src="https://github.com/user-attachments/assets/aa742c40-4509-4ec6-bb7c-275edcc9fcd9" />
+
 ## Program4
-```import java.util.Scanner;
+
+```
+import java.util.Scanner;
 
 class TimeHMS {
     int hr, min, sec;
@@ -257,11 +261,13 @@ class TimeHMS {
         System.out.print("Total Time = ");
         t3.display();
     }
-}```
+}
+```
 <img width="277" height="151" alt="image" src="https://github.com/user-attachments/assets/c73144e7-e15f-47e7-8630-ac50c4b27d0a" />
 
 ## Program5
-```import java.util.Scanner;
+```
+import java.util.Scanner;
 
 class TimeHM {
     int hr, min;
@@ -310,6 +316,7 @@ class TimeHM {
 }
  ```
 <img width="242" height="122" alt="image" src="https://github.com/user-attachments/assets/abb867ba-751b-4698-84a4-cd4c01b301d5" />
+
 ## Program6
 ```
 #include <stdio.h>
@@ -327,10 +334,12 @@ int main() {
 
     printf("Factorial = %lld", fact);
     return 0;
-}```
+}
+```
 
 <img width="151" height="45" alt="image" src="https://github.com/user-attachments/assets/6b0f5784-b187-467c-81bb-d8138af9cd08" />
-```#include <stdio.h>
+```
+#include <stdio.h>
 
 int main() {
     int i, j, n;
@@ -346,8 +355,10 @@ int main() {
     }
 
     return 0;
-}```
+}
+```
 <img width="214" height="41" alt="image" src="https://github.com/user-attachments/assets/eff13d7c-7f67-4360-b5af-a036fac0c79a" />
+```
 #include <stdio.h>
 
 int main() {
@@ -370,8 +381,10 @@ int main() {
 
     return 0;
 }
+```
 
 <img width="185" height="40" alt="image" src="https://github.com/user-attachments/assets/245bc35f-b4f9-4b80-b1e3-93c24a1ff5ef" />
+```
 #include <stdio.h>
 
 int main() {
@@ -394,7 +407,7 @@ int main() {
 ```
 
 <img width="281" height="34" alt="image" src="https://github.com/user-attachments/assets/fb0e4d7f-283b-4236-a655-af75efd30cfb" />
-##
+
 
 ```
 #include <stdio.h>
@@ -413,10 +426,12 @@ int main() {
     }
 
     return 0;
-}```
+}
+```
 <img width="255" height="109" alt="image" src="https://github.com/user-attachments/assets/dfa67ea2-7635-46be-bd6b-619a9ad32f6d" />
 ## program7
-```import java.util.Scanner;
+```
+import java.util.Scanner;
 
 class Array1D {
     int a[] = new int[100];
@@ -463,10 +478,12 @@ class Array1D {
         obj.output2();
         obj.reverse();
     }
-}```
+}
+```
 <img width="391" height="258" alt="image" src="https://github.com/user-attachments/assets/20da65e4-ec24-438f-a3c0-a45d9191f632" />
 ## Program8
-```import java.util.Scanner;
+```
+import java.util.Scanner;
 
 class MatrixOperation {
     int a[][] = new int[10][10];
@@ -577,7 +594,8 @@ class MatrixOperation {
         obj.sumOfColumns();
         obj.sumOfDiagonal();
     }
-}```
+}
+```
 
 <img width="317" height="521" alt="image" src="https://github.com/user-attachments/assets/ffd36f7f-aa35-48f2-9b87-5bd9551cd047" />
 
