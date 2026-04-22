@@ -69,12 +69,15 @@ public class Main {
 
         sc.close();
     }
-}```
+}
+```
+
 <img width="403" height="107" alt="image" src="https://github.com/user-attachments/assets/8b739f68-c8db-4793-9e60-42cd01003df1" />
 
 ## Program2
 
-```java
+```
+
 import java.util.Scanner;
 
 class Distance {
@@ -134,7 +137,8 @@ class Distance {
 <img width="254" height="124" alt="image" src="https://github.com/user-attachments/assets/62dbe0eb-8b33-40f5-8447-cb809add0b09" />
 
 ## Program3
-```import java.util.Scanner;
+```
+import java.util.Scanner;
 
 class DistanceMC {
     int m, cm;
@@ -287,10 +291,12 @@ class TimeHM {
         System.out.print("Total Time = ");
         t3.display();
     }
-} ```
+}
+ ```
 <img width="242" height="122" alt="image" src="https://github.com/user-attachments/assets/abb867ba-751b-4698-84a4-cd4c01b301d5" />
 ## Program6
-```#include <stdio.h>
+```
+#include <stdio.h>
 
 int main() {
     int n, i;
@@ -369,10 +375,13 @@ int main() {
 
     return 0;
 }
-
+```
 
 <img width="281" height="34" alt="image" src="https://github.com/user-attachments/assets/fb0e4d7f-283b-4236-a655-af75efd30cfb" />
-```#include <stdio.h>
+##
+
+```
+#include <stdio.h>
 
 int main() {
     int i, j, n;
