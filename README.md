@@ -384,6 +384,7 @@ int main() {
 ```
 
 <img width="185" height="40" alt="image" src="https://github.com/user-attachments/assets/245bc35f-b4f9-4b80-b1e3-93c24a1ff5ef" />
+
 ```
 #include <stdio.h>
 
