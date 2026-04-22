@@ -487,6 +487,7 @@ class Array1D {
 <img width="391" height="258" alt="image" src="https://github.com/user-attachments/assets/20da65e4-ec24-438f-a3c0-a45d9191f632" />
 
 ## Program8
+
 ```
 import java.util.Scanner;
 
