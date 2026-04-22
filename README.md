@@ -10,6 +10,7 @@
 [5. Addition of two time given in hours, minutes .](#Program5)
 
 [6. Collect the code from internet for any five programs of c language. (Fact, armstrong, palindrome, Fibonacci, pattern).](#Program6)
+
 [7. Write a class that is having four method for 1-dimensional array. (Input, output 1,out2, reverse).).](#Program7)
 [8.  write a class with multiple methods to perform matrix operations (transpose, addition, sum of rows, sum of columns, sum of diagonal).](#Program8)
 [9. Write a program using three classes to print 1-100 ,1-100,1-100 with and without thread and analyse the output and repeat the same program using runnable interface.](#Program8)
