@@ -607,4 +607,100 @@ class MatrixOperation {
 
 <img width="317" height="521" alt="image" src="https://github.com/user-attachments/assets/ffd36f7f-aa35-48f2-9b87-5bd9551cd047" />
 
+## Program9
+
+```
+class NumberThread1 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 1: " + i);
+        }
+    }
+}
+
+class NumberThread2 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 2: " + i);
+        }
+    }
+}
+
+class NumberThread3 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 3: " + i);
+        }
+    }
+}
+
+class Runnable1 implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Runnable 1: " + i);
+        }
+    }
+}
+
+class Runnable2 implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Runnable 2: " + i);
+        }
+    }
+}
+
+class Runnable3 implements Runnable {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Runnable 3: " + i);
+        }
+    }
+}
+
+public class Program9 {
+    public static void main(String[] args) {
+        System.out.println("WITHOUT THREAD:");
+        for (int i = 1; i <= 100; i++) {
+            System.out.print("Class 1: " + i+" ");
+        }
+        for (int i = 1; i <= 100; i++) {
+            System.out.print("Class 2: " + i+" ");
+        }
+        for (int i = 1; i <= 100; i++) {
+            System.out.print("Class 3: " + i +" ");
+        }
+
+        System.out.println("\nUSING THREAD CLASS:");
+        NumberThread1 t1 = new NumberThread1();
+        NumberThread2 t2 = new NumberThread2();
+        NumberThread3 t3 = new NumberThread3();
+
+        t1.start();
+        t2.start();
+        t3.start();
+
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        System.out.println("\nUSING RUNNABLE INTERFACE:");
+        Thread r1 = new Thread(new Runnable1());
+        Thread r2 = new Thread(new Runnable2());
+        Thread r3 = new Thread(new Runnable3());
+
+        r1.start();
+        r2.start();
+        r3.start();
+    }
+}
+```
+
+<img width="160" height="612" alt="image" src="https://github.com/user-attachments/assets/78dc3189-d2c1-42a8-910a-128177895e90" />
+
+
 
