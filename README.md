@@ -868,6 +868,222 @@ public class UserFrame extends javax.swing.JFrame {
 
 <img width="396" height="356" alt="image" src="https://github.com/user-attachments/assets/987640ef-e193-4d51-8040-b9f88b80e88b" />
 
+## Program13
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class CalculatorSwing extends JFrame implements ActionListener {
+
+    JTextField display;
+    JButton[] numberButtons = new JButton[10];
+    JButton addButton, subButton, mulButton, divButton;
+    JButton equalButton, clearButton, deleteButton, dotButton;
+
+    JPanel panel;
+
+    Font myFont = new Font("Arial", Font.BOLD, 22);
+
+    double num1 = 0, num2 = 0, result = 0;
+    char operator;
+
+    CalculatorSwing() {
+        setTitle("Calculator");
+        setSize(420, 550);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(null);
+        getContentPane().setBackground(new Color(245, 245, 245));
+
+        display = new JTextField();
+        display.setBounds(30, 30, 340, 60);
+        display.setFont(new Font("Arial", Font.BOLD, 28));
+        display.setEditable(false);
+        display.setHorizontalAlignment(JTextField.RIGHT);
+        display.setBackground(Color.WHITE);
+        display.setForeground(Color.BLACK);
+        display.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
+        add(display);
+
+        addButton = new JButton("+");
+        subButton = new JButton("-");
+        mulButton = new JButton("*");
+        divButton = new JButton("/");
+        equalButton = new JButton("=");
+        clearButton = new JButton("C");
+        deleteButton = new JButton("Del");
+        dotButton = new JButton(".");
+
+        JButton[] functionButtons = {
+            addButton, subButton, mulButton, divButton,
+            equalButton, clearButton, deleteButton, dotButton
+        };
+
+        for (int i = 0; i < 10; i++) {
+            numberButtons[i] = new JButton(String.valueOf(i));
+            numberButtons[i].setFont(myFont);
+            numberButtons[i].setFocusable(false);
+            numberButtons[i].setBackground(new Color(255, 255, 255));
+            numberButtons[i].addActionListener(this);
+        }
+
+        for (JButton button : functionButtons) {
+            button.setFont(myFont);
+            button.setFocusable(false);
+            button.setBackground(new Color(220, 220, 220));
+            button.addActionListener(this);
+        }
+
+        clearButton.setBackground(new Color(255, 153, 153));
+        deleteButton.setBackground(new Color(255, 204, 153));
+        equalButton.setBackground(new Color(153, 255, 153));
+        addButton.setBackground(new Color(204, 229, 255));
+        subButton.setBackground(new Color(204, 229, 255));
+        mulButton.setBackground(new Color(204, 229, 255));
+        divButton.setBackground(new Color(204, 229, 255));
+
+        panel = new JPanel();
+        panel.setBounds(30, 120, 340, 320);
+        panel.setLayout(new GridLayout(4, 4, 10, 10));
+        panel.setBackground(new Color(245, 245, 245));
+
+        panel.add(numberButtons[1]);
+        panel.add(numberButtons[2]);
+        panel.add(numberButtons[3]);
+        panel.add(addButton);
+
+        panel.add(numberButtons[4]);
+        panel.add(numberButtons[5]);
+        panel.add(numberButtons[6]);
+        panel.add(subButton);
+
+        panel.add(numberButtons[7]);
+        panel.add(numberButtons[8]);
+        panel.add(numberButtons[9]);
+        panel.add(mulButton);
+
+        panel.add(dotButton);
+        panel.add(numberButtons[0]);
+        panel.add(equalButton);
+        panel.add(divButton);
+
+        add(panel);
+
+        clearButton.setBounds(30, 460, 160, 40);
+        deleteButton.setBounds(210, 460, 160, 40);
+
+        add(clearButton);
+        add(deleteButton);
+
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+
+        for (int i = 0; i < 10; i++) {
+            if (e.getSource() == numberButtons[i]) {
+                display.setText(display.getText().concat(String.valueOf(i)));
+            }
+        }
+
+        if (e.getSource() == dotButton) {
+            if (!display.getText().contains(".")) {
+                display.setText(display.getText().concat("."));
+            }
+        }
+
+        if (e.getSource() == addButton) {
+            if (!display.getText().isEmpty()) {
+                num1 = Double.parseDouble(display.getText());
+                operator = '+';
+                display.setText("");
+            }
+        }
+
+        if (e.getSource() == subButton) {
+            if (!display.getText().isEmpty()) {
+                num1 = Double.parseDouble(display.getText());
+                operator = '-';
+                display.setText("");
+            }
+        }
+
+        if (e.getSource() == mulButton) {
+            if (!display.getText().isEmpty()) {
+                num1 = Double.parseDouble(display.getText());
+                operator = '*';
+                display.setText("");
+            }
+        }
+
+        if (e.getSource() == divButton) {
+            if (!display.getText().isEmpty()) {
+                num1 = Double.parseDouble(display.getText());
+                operator = '/';
+                display.setText("");
+            }
+        }
+
+        if (e.getSource() == equalButton) {
+            if (!display.getText().isEmpty()) {
+                num2 = Double.parseDouble(display.getText());
+
+                switch (operator) {
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        if (num2 == 0) {
+                            JOptionPane.showMessageDialog(this, "Cannot divide by zero");
+                            display.setText("");
+                            return;
+                        }
+                        result = num1 / num2;
+                        break;
+                }
+
+                if (result == (int) result) {
+                    display.setText(String.valueOf((int) result));
+                } else {
+                    display.setText(String.valueOf(result));
+                }
+
+                num1 = result;
+            }
+        }
+
+        if (e.getSource() == clearButton) {
+            display.setText("");
+            num1 = 0;
+            num2 = 0;
+            result = 0;
+        }
+
+        if (e.getSource() == deleteButton) {
+            String text = display.getText();
+            if (!text.isEmpty()) {
+                display.setText(text.substring(0, text.length() - 1));
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new CalculatorSwing();
+    }
+}
+```
+
+<img width="390" height="538" alt="image" src="https://github.com/user-attachments/assets/cec31415-1696-46c1-84fd-1d985cf4949b" />
+
+
+
 
 
 
