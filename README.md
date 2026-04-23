@@ -1364,6 +1364,157 @@ public class ShapeButtonsFrame extends JFrame implements ActionListener {
 ```
 <img width="887" height="591" alt="image" src="https://github.com/user-attachments/assets/fdf11559-055b-4b04-a2ab-2ee3b77dff9a" />
 
+## Program16
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+
+public class PaintBrushApp extends JFrame {
+
+    JComboBox<String> colorBox;
+    JComboBox<Integer> sizeBox;
+    JButton clearButton;
+
+    DrawPanel drawPanel;
+
+    Color selectedColor = Color.BLACK;
+    int brushSize = 5;
+
+    ArrayList<BrushPoint> points = new ArrayList<>();
+
+    PaintBrushApp() {
+        setTitle("Paint Brush Using Mouse Events");
+        setSize(900, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(new BorderLayout());
+
+        JPanel topPanel = new JPanel();
+        topPanel.setBackground(new Color(230, 240, 255));
+        topPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 20, 10));
+
+        JLabel titleLabel = new JLabel("Simple Paint Brush");
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 22));
+        titleLabel.setForeground(new Color(30, 60, 120));
+
+        JLabel colorLabel = new JLabel("Select Color:");
+        colorLabel.setFont(new Font("Arial", Font.BOLD, 16));
+
+        String[] colors = {"Black", "Red", "Blue", "Green", "Pink", "Orange"};
+        colorBox = new JComboBox<>(colors);
+        colorBox.setFont(new Font("Arial", Font.PLAIN, 15));
+
+        JLabel sizeLabel = new JLabel("Brush Width:");
+        sizeLabel.setFont(new Font("Arial", Font.BOLD, 16));
+
+        Integer[] sizes = {2, 4, 6, 8, 10, 12, 15, 20};
+        sizeBox = new JComboBox<>(sizes);
+        sizeBox.setFont(new Font("Arial", Font.PLAIN, 15));
+
+        clearButton = new JButton("Clear");
+        clearButton.setFont(new Font("Arial", Font.BOLD, 15));
+        clearButton.setBackground(new Color(255, 180, 180));
+
+        topPanel.add(titleLabel);
+        topPanel.add(colorLabel);
+        topPanel.add(colorBox);
+        topPanel.add(sizeLabel);
+        topPanel.add(sizeBox);
+        topPanel.add(clearButton);
+
+        drawPanel = new DrawPanel();
+        drawPanel.setBackground(Color.WHITE);
+
+        add(topPanel, BorderLayout.NORTH);
+        add(drawPanel, BorderLayout.CENTER);
+
+        colorBox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String colorName = (String) colorBox.getSelectedItem();
+
+                if (colorName.equals("Black")) {
+                    selectedColor = Color.BLACK;
+                } else if (colorName.equals("Red")) {
+                    selectedColor = Color.RED;
+                } else if (colorName.equals("Blue")) {
+                    selectedColor = Color.BLUE;
+                } else if (colorName.equals("Green")) {
+                    selectedColor = Color.GREEN;
+                } else if (colorName.equals("Pink")) {
+                    selectedColor = Color.PINK;
+                } else if (colorName.equals("Orange")) {
+                    selectedColor = Color.ORANGE;
+                }
+            }
+        });
+
+        sizeBox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                brushSize = (Integer) sizeBox.getSelectedItem();
+            }
+        });
+
+        clearButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                points.clear();
+                drawPanel.repaint();
+            }
+        });
+
+        setVisible(true);
+    }
+
+    class BrushPoint {
+        int x, y, size;
+        Color color;
+
+        BrushPoint(int x, int y, Color color, int size) {
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.size = size;
+        }
+    }
+
+    class DrawPanel extends JPanel implements MouseMotionListener, MouseListener {
+
+        DrawPanel() {
+            addMouseMotionListener(this);
+            addMouseListener(this);
+        }
+
+        public void mouseDragged(MouseEvent e) {
+            points.add(new BrushPoint(e.getX(), e.getY(), selectedColor, brushSize));
+            repaint();
+        }
+
+        public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+
+            for (BrushPoint p : points) {
+                g.setColor(p.color);
+                g.fillOval(p.x, p.y, p.size, p.size);
+            }
+        }
+
+        public void mouseMoved(MouseEvent e) { }
+        public void mouseClicked(MouseEvent e) { }
+        public void mousePressed(MouseEvent e) { }
+        public void mouseReleased(MouseEvent e) { }
+        public void mouseEntered(MouseEvent e) { }
+        public void mouseExited(MouseEvent e) { }
+    }
+
+    public static void main(String[] args) {
+        new PaintBrushApp();
+    }
+}
+```
+<img width="874" height="594" alt="image" src="https://github.com/user-attachments/assets/36a6851e-def3-46bb-8191-eee806083bf5" />
+
+
 
 
 
