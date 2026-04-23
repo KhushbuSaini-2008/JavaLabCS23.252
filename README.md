@@ -41,7 +41,7 @@
 
 [21.  File Handling Programs (given in the PPT)](#Program21)
 
-[22.  Inheritance Programs, using interface and abstract classes.](#Program22)
+[22.Write Java programs to demonstrate the concepts of inheritance, interface, and abstract class.](#Program22)
 
 
 
