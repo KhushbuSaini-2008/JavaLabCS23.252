@@ -1514,6 +1514,53 @@ public class PaintBrushApp extends JFrame {
 ```
 <img width="874" height="594" alt="image" src="https://github.com/user-attachments/assets/36a6851e-def3-46bb-8191-eee806083bf5" />
 
+## Program19
+```
+
+public class ExceptionDemo {
+    public static void main(String[] args) {
+
+        // ArrayIndexOutOfBoundsException demonstration
+        try {
+            int[] arr = new int[5];
+
+            arr[0] = 10;
+            arr[1] = 20;
+            arr[2] = 30;
+            arr[3] = 40;
+            arr[4] = 50;
+
+            System.out.println("Trying to access 6th element...");
+            System.out.println(arr[5]);   // invalid index
+        }
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException caught!");
+            System.out.println("Message: Array index is out of range.");
+        }
+
+        System.out.println();
+
+        // ArithmeticException demonstration
+        try {
+            int a = 10;
+            int b = 0;
+            int c = a / b;
+
+            System.out.println("Result = " + c);
+        }
+        catch (ArithmeticException e) {
+            System.out.println("ArithmeticException caught!");
+            System.out.println("Message: Division by zero is not allowed.");
+        }
+
+        System.out.println();
+        System.out.println("Program ended successfully after handling exceptions.");
+    }
+}
+```
+<img width="346" height="124" alt="image" src="https://github.com/user-attachments/assets/ccc14064-77d6-4047-9830-b41aae20929e" />
+
+
 
 
 
