@@ -31,11 +31,11 @@
 
 [16.Write a Java program using Mouse Events to create a simple paint brush application with the selection of color and brush width.](#Program16)
 
-[17.  Create a package of any 5 classes of your choice and import it](#Program17)
+[17.Create a package of any five classes of your choice, import that package into another Java program, and test all the classes.](#Program17)
 
 [18.  Create one package and sub package  import and test it .](#Program18)
 
-[19.  Create one small array of size 5 apply array out of bounds exception using try catch give a proper message in catch and demonstrate the exception exactly in the same fashion demonstrate arithmetic exception .](#Program19)
+[19. Create an array of size 5 in Java and demonstrate ArrayIndexOutOfBoundsException using try-catch. Also demonstrate ArithmeticException in the same program and display proper messages in the catch block.](#Program19)
 
 [20.  To test the range of age of one student.write a program using user defined exception.](#Program20)
 
