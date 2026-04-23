@@ -27,8 +27,7 @@
 
 [14.Write a Java Swing program to perform matrix addition of two 2×2 matrices and display the resultant matrix.](#Program14)
 
-[15.  Create one jframe apply 10 buttons on that after clicking on each button a new
-structure is created.(Circle, oval rectangle, etc ....) ](#Program15)
+[15.  Write a Java Swing program to create a JFrame containing 10 buttons. When each button is clicked, a different shape such as circle, oval, rectangle, square, line, arc, triangle, polygon, etc. should be drawn on the frame. ](#Program15)
 
 [16.  Just using mouse Event create a frame like paint brush with selection of colour and width .](#Program16)
 
