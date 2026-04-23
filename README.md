@@ -1560,6 +1560,50 @@ public class ExceptionDemo {
 ```
 <img width="346" height="124" alt="image" src="https://github.com/user-attachments/assets/ccc14064-77d6-4047-9830-b41aae20929e" />
 
+## Program20
+```
+import java.util.Scanner;
+class InvalidAgeException extends Exception {
+
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+public class StudentAgeTest {
+
+    // method to check age
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 5 || age > 25) {
+            throw new InvalidAgeException("Invalid Age! Age must be between 5 and 25.");
+        } else {
+            System.out.println("Valid student age.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter student age: ");
+            int age = sc.nextInt();
+
+            checkAge(age);   // calling method
+
+        } catch (InvalidAgeException e) {
+            System.out.println("User Defined Exception Caught!");
+            System.out.println("Message: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Please enter a valid number.");
+        }
+
+        sc.close();
+    }
+}
+```
+<img width="371" height="64" alt="image" src="https://github.com/user-attachments/assets/17581033-4b50-41f5-b187-1cc869c037f7" />
+
+
 
 
 
