@@ -1603,6 +1603,80 @@ public class StudentAgeTest {
 ```
 <img width="371" height="64" alt="image" src="https://github.com/user-attachments/assets/17581033-4b50-41f5-b187-1cc869c037f7" />
 
+## Program22
+
+```
+// -------- INTERFACE --------
+interface Printable {
+    void print();
+}
+
+// -------- ABSTRACT CLASS --------
+abstract class Shape {
+    abstract void draw();
+
+    void message() {
+        System.out.println("This is an abstract class.");
+    }
+}
+
+// -------- INHERITANCE --------
+class Animal {
+    void eat() {
+        System.out.println("Animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks.");
+    }
+}
+
+// -------- CLASS IMPLEMENTING INTERFACE --------
+class Document implements Printable {
+    public void print() {
+        System.out.println("Printing document using interface.");
+    }
+}
+
+// -------- CLASS EXTENDING ABSTRACT CLASS --------
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a circle.");
+    }
+}
+
+// -------- MAIN CLASS --------
+public class ConceptDemo {
+    public static void main(String[] args) {
+
+        // Inheritance
+        System.out.println("---- INHERITANCE ----");
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+
+        System.out.println();
+
+        // Interface
+        System.out.println("---- INTERFACE ----");
+        Document doc = new Document();
+        doc.print();
+
+        System.out.println();
+
+        // Abstract Class
+        System.out.println("---- ABSTRACT CLASS ----");
+        Circle c = new Circle();
+        c.draw();
+        c.message();
+    }
+}
+```
+<img width="321" height="149" alt="image" src="https://github.com/user-attachments/assets/a3b289f5-4ffa-47f6-aa55-dddfde283e9c" />
+
+
 
 
 
