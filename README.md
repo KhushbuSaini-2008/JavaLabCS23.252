@@ -37,7 +37,7 @@
 
 [19. Create an array of size 5 in Java and demonstrate ArrayIndexOutOfBoundsException using try-catch. Also demonstrate ArithmeticException in the same program and display proper messages in the catch block.](#Program19)
 
-[20.  To test the range of age of one student.write a program using user defined exception.](#Program20)
+[20.Write a Java program to test the valid age range of a student using a user-defined exception. If the age is not within the valid range, throw and handle the exception with a proper message.](#Program20)
 
 [21.  File Handling Programs (given in the PPT)](#Program21)
 
