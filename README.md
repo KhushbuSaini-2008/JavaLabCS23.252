@@ -23,7 +23,7 @@
 
 [12.  Make a registration form with 10 elements and send the data into database (use jdbc connectivity)](#Program12)
 
-[13.  Make one calculator in swing.](#Program13)
+[13.Write a Java Swing program to create a simple calculator that performs addition, subtraction, multiplication, and division of two numbers.](#Program13)
 
 [14.  Matrix Addition using swing class.](#Program14)
 
