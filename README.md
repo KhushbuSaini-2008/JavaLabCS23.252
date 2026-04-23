@@ -1229,6 +1229,142 @@ public class MatrixAdditionSwing extends JFrame implements ActionListener {
 ```
 <img width="833" height="587" alt="image" src="https://github.com/user-attachments/assets/7ecfe637-9222-47e7-96c5-1f574b7e7ec0" />
 
+##Program15
+
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ShapeButtonsFrame extends JFrame implements ActionListener {
+
+    JButton circleBtn, ovalBtn, rectBtn, squareBtn, lineBtn;
+    JButton arcBtn, triangleBtn, diamondBtn, polygonBtn, fillOvalBtn;
+
+    DrawingPanel drawingPanel;
+    String currentShape = "";
+
+    Font btnFont = new Font("Arial", Font.BOLD, 14);
+
+    ShapeButtonsFrame() {
+        setTitle("Shape Drawing Using 10 Buttons");
+        setSize(900, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(new BorderLayout());
+
+        JPanel topPanel = new JPanel();
+        topPanel.setLayout(new GridLayout(2, 5, 10, 10));
+        topPanel.setBackground(new Color(240, 248, 255));
+        topPanel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
+
+        circleBtn = createButton("Circle", new Color(255, 204, 204));
+        ovalBtn = createButton("Oval", new Color(255, 229, 204));
+        rectBtn = createButton("Rectangle", new Color(255, 255, 204));
+        squareBtn = createButton("Square", new Color(204, 255, 204));
+        lineBtn = createButton("Line", new Color(204, 255, 255));
+        arcBtn = createButton("Arc", new Color(204, 229, 255));
+        triangleBtn = createButton("Triangle", new Color(229, 204, 255));
+        diamondBtn = createButton("Diamond", new Color(255, 204, 229));
+        polygonBtn = createButton("Polygon", new Color(220, 220, 220));
+        fillOvalBtn = createButton("Fill Oval", new Color(255, 180, 180));
+
+        topPanel.add(circleBtn);
+        topPanel.add(ovalBtn);
+        topPanel.add(rectBtn);
+        topPanel.add(squareBtn);
+        topPanel.add(lineBtn);
+        topPanel.add(arcBtn);
+        topPanel.add(triangleBtn);
+        topPanel.add(diamondBtn);
+        topPanel.add(polygonBtn);
+        topPanel.add(fillOvalBtn);
+
+        drawingPanel = new DrawingPanel();
+        drawingPanel.setBackground(Color.WHITE);
+
+        JLabel heading = new JLabel("Click any button to draw a shape", JLabel.CENTER);
+        heading.setFont(new Font("Arial", Font.BOLD, 24));
+        heading.setForeground(new Color(40, 40, 120));
+        heading.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+        add(heading, BorderLayout.NORTH);
+        add(topPanel, BorderLayout.SOUTH);
+        add(drawingPanel, BorderLayout.CENTER);
+
+        setVisible(true);
+    }
+
+    JButton createButton(String text, Color color) {
+        JButton btn = new JButton(text);
+        btn.setFont(btnFont);
+        btn.setBackground(color);
+        btn.setFocusable(false);
+        btn.addActionListener(this);
+        return btn;
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        currentShape = e.getActionCommand();
+        drawingPanel.repaint();
+    }
+
+    class DrawingPanel extends JPanel {
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+
+            Graphics2D g2 = (Graphics2D) g;
+            g2.setStroke(new BasicStroke(3));
+            g2.setColor(new Color(50, 50, 50));
+
+            if (currentShape.equals("Circle")) {
+                g2.drawOval(320, 120, 150, 150);
+            }
+            else if (currentShape.equals("Oval")) {
+                g2.drawOval(280, 140, 220, 120);
+            }
+            else if (currentShape.equals("Rectangle")) {
+                g2.drawRect(280, 140, 220, 120);
+            }
+            else if (currentShape.equals("Square")) {
+                g2.drawRect(320, 120, 150, 150);
+            }
+            else if (currentShape.equals("Line")) {
+                g2.drawLine(250, 100, 550, 250);
+            }
+            else if (currentShape.equals("Arc")) {
+                g2.drawArc(280, 120, 220, 150, 0, 180);
+            }
+            else if (currentShape.equals("Triangle")) {
+                int[] x = {390, 300, 480};
+                int[] y = {100, 250, 250};
+                g2.drawPolygon(x, y, 3);
+            }
+            else if (currentShape.equals("Diamond")) {
+                int[] x = {390, 320, 390, 460};
+                int[] y = {100, 180, 260, 180};
+                g2.drawPolygon(x, y, 4);
+            }
+            else if (currentShape.equals("Polygon")) {
+                int[] x = {330, 380, 450, 430, 350, 300};
+                int[] y = {120, 90, 130, 210, 240, 180};
+                g2.drawPolygon(x, y, 6);
+            }
+            else if (currentShape.equals("Fill Oval")) {
+                g2.setColor(new Color(255, 120, 120));
+                g2.fillOval(300, 130, 200, 120);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new ShapeButtonsFrame();
+    }
+}
+```
+<img width="887" height="591" alt="image" src="https://github.com/user-attachments/assets/fdf11559-055b-4b04-a2ab-2ee3b77dff9a" />
+
+
 
 
 
