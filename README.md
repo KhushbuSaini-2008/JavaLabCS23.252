@@ -25,7 +25,7 @@
 
 [13.Write a Java Swing program to create a simple calculator that performs addition, subtraction, multiplication, and division of two numbers.](#Program13)
 
-[14.  Matrix Addition using swing class.](#Program14)
+[14.Write a Java Swing program to perform matrix addition of two 2×2 matrices and display the resultant matrix.](#Program14)
 
 [15.  Create one jframe apply 10 buttons on that after clicking on each button a new
 structure is created.(Circle, oval rectangle, etc ....) ](#Program15)
