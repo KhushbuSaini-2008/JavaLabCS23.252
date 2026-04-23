@@ -29,7 +29,7 @@
 
 [15.  Write a Java Swing program to create a JFrame containing 10 buttons. When each button is clicked, a different shape such as circle, oval, rectangle, square, line, arc, triangle, polygon, etc. should be drawn on the frame. ](#Program15)
 
-[16.  Just using mouse Event create a frame like paint brush with selection of colour and width .](#Program16)
+[16.Write a Java program using Mouse Events to create a simple paint brush application with the selection of color and brush width.](#Program16)
 
 [17.  Create a package of any 5 classes of your choice and import it](#Program17)
 
