@@ -1,29 +1,29 @@
 # JavaLabCS23.252
-[1.Wap for addition sub mul div using object and classes.](#Program1)
+[1.Write a Java program to perform addition, subtraction, multiplication, and division using objects and classes.](#Program1)
 
-[2.Write a class for addition of two distance where each distance is given in m,cm,mm.](#Program2)
+[2.Write a Java class to represent distance in meters, centimeters, and millimeters, and perform the addition of two distances.](#Program2)
 
-[3.Test the result by creation of object in main class where each distance is given in m, cm](#Program3)
+[3.Write a Java program to test the addition of two distances by creating objects in the main class, where each distance is given in meters and centimeters.](#Program3)
 
-[4.Addition of  two time given in hours, minutes and seconds.](#Program4)
+[4.Write a Java program to add two time values given in hours, minutes, and seconds, and display the result in proper time format.](#Program4)
 
-[5.Addition of two time given in hours, minutes .](#Program5)
+[5.Write a Java program to add two time values given in hours and minutes, and display the result in proper format.](#Program5)
 
-[6.Collect the code from internet for any five programs of c language. (Fact, armstrong, palindrome, Fibonacci, pattern).](#Program6)
+[6.Collect and write five C language programs from the internet for the following problems: Factorial, Armstrong number, Palindrome number, Fibonacci series, and Pattern printing.](#Program6)
 
-[7.Write a class that is having four method for 1-dimensional array. (Input, output 1,out2, reverse).).](#Program7)
+[7.Write a Java class that contains four methods for one-dimensional array operations: input of elements, display of elements (method 1), display of elements (method 2), and reversing the array.](#Program7)
 
-[8.write a class with multiple methods to perform matrix operations (transpose, addition, sum of rows, sum of columns, sum of diagonal).](#Program8)
+[8.Write a Java class with multiple methods to perform matrix operations such as transpose of a matrix, addition of two matrices, sum of rows, sum of columns, and sum of diagonal elements.](#Program8)
 
-[9.Write a Java program using three classes to print 1–100, 1–100, 1–100 with and without thread and analyze the output. Also repeat the same program using Runnable interface.](#Program9)
+[9.Write a Java program using three classes to print numbers from 1 to 100 simultaneously. Execute the program with and without using threads, analyze the output, and then repeat the same program using the Runnable interface.](#Program9)
 
-[10. Using the concept of multithreading the output of all three threads must be synchronised (use join method).](#Program10)
+[10.Write a Java program using multithreading where the output of three threads is synchronized using the join() method.](#Program10)
 
-[11. Addition of 2 numbers using swing.](#Program11)
+[11.Write a Java Swing program to perform the addition of two numbers using a graphical user interface.](#Program11)
 
-[12.  Make a registration form with 10 elements and send the data into database (use jdbc connectivity)](#Program12)
+[12.Design a Java Swing registration form with at least 10 input elements and store the entered data into a database using JDBC connectivity](#Program12)
 
-[13.Write a Java Swing program to create a simple calculator that performs addition, subtraction, multiplication, and division of two numbers.](#Program13)
+[13.Write a Java Swing program to create a calculator that performs addition, subtraction, multiplication, and division of two numbers.](#Program13)
 
 [14.Write a Java Swing program to perform matrix addition of two 2×2 matrices and display the resultant matrix.](#Program14)
 
