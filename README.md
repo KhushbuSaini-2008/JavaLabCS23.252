@@ -1083,6 +1083,154 @@ public class CalculatorSwing extends JFrame implements ActionListener {
 <img width="390" height="538" alt="image" src="https://github.com/user-attachments/assets/cec31415-1696-46c1-84fd-1d985cf4949b" />
 
 
+## Program14
+
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class MatrixAdditionSwing extends JFrame implements ActionListener {
+
+    JTextField[][] matrixA = new JTextField[3][3];
+    JTextField[][] matrixB = new JTextField[3][3];
+    JTextField[][] resultMatrix = new JTextField[3][3];
+
+    JButton addButton, clearButton;
+    JLabel titleLabel, labelA, labelB, labelResult;
+
+    Font titleFont = new Font("Arial", Font.BOLD, 24);
+    Font labelFont = new Font("Arial", Font.BOLD, 18);
+    Font fieldFont = new Font("Arial", Font.PLAIN, 18);
+
+    MatrixAdditionSwing() {
+        setTitle("Matrix Addition Using Swing");
+        setSize(850, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(null);
+        getContentPane().setBackground(new Color(245, 248, 255));
+
+        titleLabel = new JLabel("Matrix Addition Calculator");
+        titleLabel.setFont(titleFont);
+        titleLabel.setBounds(260, 20, 350, 40);
+        titleLabel.setForeground(new Color(30, 60, 120));
+        add(titleLabel);
+
+        labelA = new JLabel("Matrix A");
+        labelA.setFont(labelFont);
+        labelA.setBounds(120, 80, 120, 30);
+        add(labelA);
+
+        labelB = new JLabel("Matrix B");
+        labelB.setFont(labelFont);
+        labelB.setBounds(360, 80, 120, 30);
+        add(labelB);
+
+        labelResult = new JLabel("Result Matrix");
+        labelResult.setFont(labelFont);
+        labelResult.setBounds(600, 80, 150, 30);
+        add(labelResult);
+
+        createMatrix(matrixA, 70, 130);
+        createMatrix(matrixB, 320, 130);
+        createResultMatrix(resultMatrix, 570, 130);
+
+        addButton = new JButton("Add Matrices");
+        addButton.setBounds(250, 420, 150, 45);
+        addButton.setFont(new Font("Arial", Font.BOLD, 16));
+        addButton.setBackground(new Color(153, 255, 153));
+        addButton.addActionListener(this);
+        add(addButton);
+
+        clearButton = new JButton("Clear");
+        clearButton.setBounds(430, 420, 150, 45);
+        clearButton.setFont(new Font("Arial", Font.BOLD, 16));
+        clearButton.setBackground(new Color(255, 204, 153));
+        clearButton.addActionListener(this);
+        add(clearButton);
+
+        JLabel note = new JLabel("Enter integer values in both matrices and click Add Matrices.");
+        note.setFont(new Font("Arial", Font.ITALIC, 15));
+        note.setBounds(180, 490, 500, 30);
+        note.setForeground(Color.DARK_GRAY);
+        add(note);
+
+        setVisible(true);
+    }
+
+    void createMatrix(JTextField[][] matrix, int startX, int startY) {
+        int width = 50;
+        int height = 40;
+        int gap = 10;
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                matrix[i][j] = new JTextField();
+                matrix[i][j].setBounds(startX + j * (width + gap), startY + i * (height + gap), width, height);
+                matrix[i][j].setFont(fieldFont);
+                matrix[i][j].setHorizontalAlignment(JTextField.CENTER);
+                matrix[i][j].setBackground(Color.WHITE);
+                matrix[i][j].setBorder(BorderFactory.createLineBorder(new Color(100, 100, 100), 2));
+                add(matrix[i][j]);
+            }
+        }
+    }
+
+    void createResultMatrix(JTextField[][] matrix, int startX, int startY) {
+        int width = 50;
+        int height = 40;
+        int gap = 10;
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                matrix[i][j] = new JTextField();
+                matrix[i][j].setBounds(startX + j * (width + gap), startY + i * (height + gap), width, height);
+                matrix[i][j].setFont(fieldFont);
+                matrix[i][j].setHorizontalAlignment(JTextField.CENTER);
+                matrix[i][j].setEditable(false);
+                matrix[i][j].setBackground(new Color(230, 255, 230));
+                matrix[i][j].setBorder(BorderFactory.createLineBorder(new Color(0, 128, 0), 2));
+                add(matrix[i][j]);
+            }
+        }
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == addButton) {
+            try {
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        int a = Integer.parseInt(matrixA[i][j].getText());
+                        int b = Integer.parseInt(matrixB[i][j].getText());
+                        int sum = a + b;
+                        resultMatrix[i][j].setText(String.valueOf(sum));
+                    }
+                }
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(this, "Please enter valid integer values in all boxes.");
+            }
+        }
+
+        if (e.getSource() == clearButton) {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    matrixA[i][j].setText("");
+                    matrixB[i][j].setText("");
+                    resultMatrix[i][j].setText("");
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new MatrixAdditionSwing();
+    }
+}
+```
+<img width="833" height="587" alt="image" src="https://github.com/user-attachments/assets/7ecfe637-9222-47e7-96c5-1f574b7e7ec0" />
+
+
 
 
 
