@@ -917,6 +917,241 @@ public class UserFrame extends javax.swing.JFrame {
 
 <img width="396" height="356" alt="image" src="https://github.com/user-attachments/assets/987640ef-e193-4d51-8040-b9f88b80e88b" />
 
+## Program12
+
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+
+public class RegistrationForm extends JFrame implements ActionListener {
+
+    JTextField firstNameField, lastNameField, ageField, emailField, phoneField, cityField;
+    JTextArea addressArea;
+    JRadioButton maleBtn, femaleBtn;
+    JComboBox<String> courseBox, branchBox;
+    JButton submitBtn, clearBtn;
+
+    RegistrationForm() {
+        setTitle("Student Registration Form");
+        setSize(600, 650);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setLayout(null);
+        getContentPane().setBackground(new Color(240, 248, 255));
+
+        JLabel title = new JLabel("Student Registration Form");
+        title.setFont(new Font("Arial", Font.BOLD, 24));
+        title.setBounds(140, 20, 350, 40);
+        add(title);
+
+        JLabel firstNameLabel = new JLabel("First Name:");
+        firstNameLabel.setBounds(80, 90, 120, 25);
+        add(firstNameLabel);
+
+        firstNameField = new JTextField();
+        firstNameField.setBounds(220, 90, 250, 25);
+        add(firstNameField);
+
+        JLabel lastNameLabel = new JLabel("Last Name:");
+        lastNameLabel.setBounds(80, 130, 120, 25);
+        add(lastNameLabel);
+
+        lastNameField = new JTextField();
+        lastNameField.setBounds(220, 130, 250, 25);
+        add(lastNameField);
+
+        JLabel genderLabel = new JLabel("Gender:");
+        genderLabel.setBounds(80, 170, 120, 25);
+        add(genderLabel);
+
+        maleBtn = new JRadioButton("Male");
+        femaleBtn = new JRadioButton("Female");
+
+        maleBtn.setBounds(220, 170, 80, 25);
+        femaleBtn.setBounds(310, 170, 100, 25);
+
+        maleBtn.setBackground(new Color(240, 248, 255));
+        femaleBtn.setBackground(new Color(240, 248, 255));
+
+        ButtonGroup genderGroup = new ButtonGroup();
+        genderGroup.add(maleBtn);
+        genderGroup.add(femaleBtn);
+
+        add(maleBtn);
+        add(femaleBtn);
+
+        JLabel ageLabel = new JLabel("Age:");
+        ageLabel.setBounds(80, 210, 120, 25);
+        add(ageLabel);
+
+        ageField = new JTextField();
+        ageField.setBounds(220, 210, 250, 25);
+        add(ageField);
+
+        JLabel emailLabel = new JLabel("Email:");
+        emailLabel.setBounds(80, 250, 120, 25);
+        add(emailLabel);
+
+        emailField = new JTextField();
+        emailField.setBounds(220, 250, 250, 25);
+        add(emailField);
+
+        JLabel phoneLabel = new JLabel("Phone:");
+        phoneLabel.setBounds(80, 290, 120, 25);
+        add(phoneLabel);
+
+        phoneField = new JTextField();
+        phoneField.setBounds(220, 290, 250, 25);
+        add(phoneField);
+
+        JLabel courseLabel = new JLabel("Course:");
+        courseLabel.setBounds(80, 330, 120, 25);
+        add(courseLabel);
+
+        String[] courses = {"B.Tech", "BCA", "MCA", "B.Sc", "M.Tech"};
+        courseBox = new JComboBox<>(courses);
+        courseBox.setBounds(220, 330, 250, 25);
+        add(courseBox);
+
+        JLabel branchLabel = new JLabel("Branch:");
+        branchLabel.setBounds(80, 370, 120, 25);
+        add(branchLabel);
+
+        String[] branches = {"CSE", "IT", "ECE", "AI/ML", "Data Science"};
+        branchBox = new JComboBox<>(branches);
+        branchBox.setBounds(220, 370, 250, 25);
+        add(branchBox);
+
+        JLabel cityLabel = new JLabel("City:");
+        cityLabel.setBounds(80, 410, 120, 25);
+        add(cityLabel);
+
+        cityField = new JTextField();
+        cityField.setBounds(220, 410, 250, 25);
+        add(cityField);
+
+        JLabel addressLabel = new JLabel("Address:");
+        addressLabel.setBounds(80, 450, 120, 25);
+        add(addressLabel);
+
+        addressArea = new JTextArea();
+        addressArea.setBounds(220, 450, 250, 70);
+        addressArea.setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        add(addressArea);
+
+        submitBtn = new JButton("Submit");
+        submitBtn.setBounds(160, 550, 120, 35);
+        submitBtn.setBackground(new Color(144, 238, 144));
+        submitBtn.addActionListener(this);
+        add(submitBtn);
+
+        clearBtn = new JButton("Clear");
+        clearBtn.setBounds(310, 550, 120, 35);
+        clearBtn.setBackground(new Color(255, 182, 193));
+        clearBtn.addActionListener(this);
+        add(clearBtn);
+
+        setVisible(true);
+    }
+
+    public Connection getConnection() {
+        Connection con = null;
+
+        try {
+            Class.forName("oracle.jdbc.OracleDriver");
+
+            con = DriverManager.getConnection(
+                "jdbc:oracle:thin:@localhost:1521:XE",
+                "stress_user",
+                "Stress123"
+            );
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Database Connection Error: " + e.getMessage());
+        }
+
+        return con;
+    }
+
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == submitBtn) {
+            String firstName = firstNameField.getText();
+            String lastName = lastNameField.getText();
+
+            String gender = "";
+            if (maleBtn.isSelected()) {
+                gender = "Male";
+            } else if (femaleBtn.isSelected()) {
+                gender = "Female";
+            }
+
+            String age = ageField.getText();
+            String email = emailField.getText();
+            String phone = phoneField.getText();
+            String course = courseBox.getSelectedItem().toString();
+            String branch = branchBox.getSelectedItem().toString();
+            String city = cityField.getText();
+            String address = addressArea.getText();
+
+            try {
+                Connection con = getConnection();
+
+                String query = "INSERT INTO registration " +
+        "(id, first_name, last_name, gender, age, email, phone, course, branch, city, address) " +
+        "VALUES (reg_seq.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+               PreparedStatement pst = con.prepareStatement(query);
+
+pst.setString(1, firstName);
+pst.setString(2, lastName);
+pst.setString(3, gender);
+pst.setInt(4, Integer.parseInt(age));
+pst.setString(5, email);
+pst.setString(6, phone);
+pst.setString(7, course);
+pst.setString(8, branch);
+pst.setString(9, city);
+pst.setString(10, address);
+
+pst.executeUpdate();
+               
+                JOptionPane.showMessageDialog(this, "Registration Successful!");
+
+                con.close();
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
+            }
+        }
+
+        if (e.getSource() == clearBtn) {
+            firstNameField.setText("");
+            lastNameField.setText("");
+            ageField.setText("");
+            emailField.setText("");
+            phoneField.setText("");
+            cityField.setText("");
+            addressArea.setText("");
+            maleBtn.setSelected(false);
+            femaleBtn.setSelected(false);
+            courseBox.setSelectedIndex(0);
+            branchBox.setSelectedIndex(0);
+        }
+    }
+
+    public static void main(String[] args) {
+        new RegistrationForm();
+    }
+}
+```
+<img width="576" height="640" alt="image" src="https://github.com/user-attachments/assets/bca3d67a-a3e5-47cc-b0c1-e6cf1158dc98" />
+
+<img width="1028" height="433" alt="image" src="https://github.com/user-attachments/assets/395815e9-5022-4c5c-950c-0be53cd2c57e" />
+
+
 ## Program13
 ```
 import javax.swing.*;
