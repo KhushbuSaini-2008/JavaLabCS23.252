@@ -39,7 +39,7 @@
 
 [20.Write a Java program to test the valid age range of a student using a user-defined exception. If the age is not within the valid range, throw and handle the exception with a proper message.](#Program20)
 
-[21.  File Handling Programs (given in the PPT)](#Program21)
+[21.Write Java programs to demonstrate file handling using character stream, byte stream, primitive data stream, and file copy operations.](#Program21)
 
 [22.Write Java programs to demonstrate the concepts of inheritance, interface, and abstract class.](#Program22)
 
@@ -1887,6 +1887,166 @@ public class StudentAgeTest {
 }
 ```
 <img width="371" height="64" alt="image" src="https://github.com/user-attachments/assets/17581033-4b50-41f5-b187-1cc869c037f7" />
+
+## Program21
+
+```
+import java.io.*;
+
+public class ByteStreamDemo {
+    public static void main(String[] args) {
+        try {
+            FileOutputStream fos = new FileOutputStream("bytefile.txt");
+            fos.write("Hello Byte Stream".getBytes());
+            fos.close();
+
+            FileInputStream fis = new FileInputStream("bytefile.txt");
+
+            int b;
+            System.out.println("Data from file:");
+
+            while ((b = fis.read()) != -1) {
+                System.out.print((char) b);
+            }
+
+            fis.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+<img width="555" height="52" alt="image" src="https://github.com/user-attachments/assets/a18487f5-ca9a-451d-bbf4-f294346593ed" />
+
+```
+import java.io.*;
+
+public class PrimitiveStreamDemo {
+    public static void main(String[] args) {
+        try {
+            DataOutputStream dos = new DataOutputStream(new FileOutputStream("student.dat"));
+
+            dos.writeInt(101);
+            dos.writeUTF("Khushbu");
+            dos.writeDouble(95.5);
+            dos.writeBoolean(true);
+
+            dos.close();
+
+            DataInputStream dis = new DataInputStream(new FileInputStream("student.dat"));
+
+            int rollNo = dis.readInt();
+            String name = dis.readUTF();
+            double marks = dis.readDouble();
+            boolean passed = dis.readBoolean();
+
+            dis.close();
+
+            System.out.println("Roll No: " + rollNo);
+            System.out.println("Name: " + name);
+            System.out.println("Marks: " + marks);
+            System.out.println("Passed: " + passed);
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+<img width="352" height="77" alt="image" src="https://github.com/user-attachments/assets/efa63635-6d03-4ad2-b5e1-9ccb941bb645" />
+
+
+
+
+```
+import java.io.*;
+
+public class CharacterStreamDemo {
+    public static void main(String[] args) {
+        try {
+            FileWriter fw = new FileWriter("charfile.txt");
+            fw.write("Hello Java File Handling");
+            fw.close();
+
+            FileReader fr = new FileReader("charfile.txt");
+
+            int ch;
+            System.out.println("Data from file:");
+
+            while ((ch = fr.read()) != -1) {
+                System.out.print((char) ch);
+            }
+
+            fr.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+
+<img width="292" height="46" alt="image" src="https://github.com/user-attachments/assets/77cf0f13-266f-44a8-b1a4-a8591ee6cd54" />
+
+```
+import java.io.*;
+
+public class CharFileCopy {
+    public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("source.txt");
+            FileWriter fw = new FileWriter("dest_char.txt");
+
+            int ch;
+
+            while ((ch = fr.read()) != -1) {
+                fw.write(ch);
+            }
+
+            fr.close();
+            fw.close();
+
+            System.out.println("File copied using character stream.");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+
+<img width="952" height="39" alt="image" src="https://github.com/user-attachments/assets/dfa2e5d2-94ac-4899-bad4-d6c1ab1a9e17" />
+
+
+```
+import java.io.*;
+
+public class ByteFileCopy {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream("source.txt");
+            FileOutputStream fos = new FileOutputStream("dest_byte.txt");
+
+            int b;
+
+            while ((b = fis.read()) != -1) {
+                fos.write(b);
+            }
+
+            fis.close();
+            fos.close();
+
+            System.out.println("File copied using byte stream.");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+<img width="1035" height="34" alt="image" src="https://github.com/user-attachments/assets/8642d106-6b6e-49fd-8bec-9c69c77a8166" />
+
+
+
 
 ## Program22
 
