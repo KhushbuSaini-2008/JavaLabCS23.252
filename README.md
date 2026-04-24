@@ -701,6 +701,56 @@ public class Program9 {
 
 <img width="160" height="612" alt="image" src="https://github.com/user-attachments/assets/78dc3189-d2c1-42a8-910a-128177895e90" />
 
+## Program10
+```
+class MyThread extends Thread {
+    String threadName;
+
+    MyThread(String name) {
+        threadName = name;
+    }
+
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(threadName + " : " + i);
+            try {
+                Thread.sleep(500); // delay for visibility
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+        }
+    }
+}
+
+public class ThreadJoinDemo {
+    public static void main(String[] args) {
+
+        MyThread t1 = new MyThread("Thread 1");
+        MyThread t2 = new MyThread("Thread 2");
+        MyThread t3 = new MyThread("Thread 3");
+
+        try {
+            t1.start();
+            t1.join();   // wait for t1 to finish
+
+            t2.start();
+            t2.join();   // wait for t2 to finish
+
+            t3.start();
+            t3.join();   // wait for t3 to finish
+
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+
+        System.out.println("All threads executed in synchronized manner.");
+    }
+}
+```
+
+<img width="805" height="160" alt="image" src="https://github.com/user-attachments/assets/b9562d09-86e1-4a11-92b7-802a5a338c68" />
+
+
 ## Program11
 
 ```
