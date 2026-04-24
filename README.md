@@ -1862,6 +1862,41 @@ public class TestPackage {
 
 <img width="400" height="102" alt="image" src="https://github.com/user-attachments/assets/f059fe93-a957-4e24-8b25-2511be2341a5" />
 
+## Program18
+
+```
+// in package folder
+package college;
+
+public class Student {
+    public void showStudent() {
+        System.out.println("This is Student class from main package.");
+    }
+}
+//  in info folder
+package college.info;
+
+public class Address {
+    public void showAddress() {
+        System.out.println("This is Address class from sub-package.");
+    }
+}
+// in java lab folder
+import college.Student;
+import college.info.Address;
+
+public class TestSubPackage {
+    public static void main(String[] args) {
+        Student s = new Student();
+        Address a = new Address();
+
+        s.showStudent();
+        a.showAddress();
+    }
+}
+```
+<img width="437" height="50" alt="image" src="https://github.com/user-attachments/assets/0a197cc9-2100-49e4-b9d9-d2fbce001005" />
+
 
 
 ## Program19
