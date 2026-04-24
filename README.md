@@ -31,7 +31,7 @@
 
 [16.Write a Java program using Mouse Events to create a simple paint brush application with the selection of color and brush width.](#Program16)
 
-[17.Create a package of any five classes of your choice, import that package into another Java program, and test all the classes.](#Program17)
+[17.Create a package containing any five classes of your choice. Import that package into another Java program and test all the classes.](#Program17)
 
 [18.  Create one package and sub package  import and test it .](#Program18)
 
@@ -1798,6 +1798,71 @@ public class PaintBrushApp extends JFrame {
 }
 ```
 <img width="874" height="594" alt="image" src="https://github.com/user-attachments/assets/36a6851e-def3-46bb-8191-eee806083bf5" />
+
+## Program17
+```
+package mypack;
+
+public class Addition {
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+```
+package mypack;
+
+public class Subtraction {
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+}
+```
+```
+package mypack;
+
+public class Multiplication {
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+}
+```
+```
+package mypack;
+
+public class Division {
+    public int divide(int a, int b) {
+        return a / b;
+    }
+}
+```
+```
+import mypack.Addition;
+import mypack.Subtraction;
+import mypack.Multiplication;
+import mypack.Division;
+import mypack.Message;
+
+public class TestPackage {
+    public static void main(String[] args) {
+        Addition a = new Addition();
+        Subtraction s = new Subtraction();
+        Multiplication m = new Multiplication();
+        Division d = new Division();
+        Message msg = new Message();
+
+        System.out.println("Addition = " + a.add(20, 10));
+        System.out.println("Subtraction = " + s.subtract(20, 10));
+        System.out.println("Multiplication = " + m.multiply(20, 10));
+        System.out.println("Division = " + d.divide(20, 10));
+        msg.showMessage();
+    }
+}
+```
+
+<img width="400" height="102" alt="image" src="https://github.com/user-attachments/assets/f059fe93-a957-4e24-8b25-2511be2341a5" />
+
+
 
 ## Program19
 ```
