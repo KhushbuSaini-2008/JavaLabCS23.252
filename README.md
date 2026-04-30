@@ -6,7 +6,7 @@
 
 [3.Write a Java program to test the addition of two distances by creating objects in the main class, where each distance is given in meters and centimeters.](#Program3)
 
-[4.Write a Java program to add two time values given in hours, minutes, and seconds, and display the result in proper time format.](#Program4)
+[4.Write a Java program to add two time values given in hours, minutes, and seconds, and display the result in proper time format.](#Program4).
 
 [5.Write a Java program to add two time values given in hours and minutes, and display the result in proper format.](#Program5)
 
